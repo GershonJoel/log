@@ -1,0 +1,91 @@
+<!DOCTYPE  html>
+<html>
+    <head>
+        <title>document</title>
+        <style>
+
+            :root{
+                --main-radius:5px;
+                --main-padding:5px
+            }
+            body{
+               /*background-color: aquamarine; */
+               font-family: cursive;
+               font-weight: bolder
+            }
+            .container{
+                display: grid;
+                height: 100vh;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 0.2fr 0.2fr 0.2fr 0.2fr;
+                grid-template-areas:
+                "nav nav nav nav"
+                "sidebar main main main"
+                "sidebar content1 content2 content3"
+                "sidebar footer footer footer";
+                grid-gap: 0.2rem;
+                font-weight: 300;
+                text-transform: uppercase;
+                color: aquamarine;
+                text-align: center;
+            }
+            nav{
+                background-color: aqua;
+                grid-area: nav;
+                border-radius: var(--main-radius);
+                padding-top: var(--main-padding);
+            }
+            main{
+                background-color: skyblue;
+                grid-area: main;
+                border-radius: var(--main-radius);
+                padding-top: var(--main-padding);
+            }
+            #sidebar{
+                background-color: bisque;
+                grid-area: sidebar;
+                border-radius: var(--main-radius);
+                padding-top: var(--main-padding);
+            }
+            #content1{
+                background-color: bisque;
+                grid-area: content1;
+                border-radius: var(--main-radius);
+                padding-top: var(--main-padding);
+            }
+            #content2{
+                background-color: bisque;
+                grid-area: content2;
+                border-radius: var(--main-radius);
+                padding-top: var(--main-padding);  
+            }
+            #content3{
+                background-color: bisque;
+                grid-area: content3;
+                border-radius: var(--main-radius);
+                padding-top: var(--main-padding);
+            }
+
+            footer{
+                background-color: bisque;
+                grid-area: content3;
+                border-radius: var(--main-radius);
+                padding-top: var(--main-padding);
+            }
+
+            
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+        <nav>navbar</nav>
+        <main>main</main>
+        <div id="sidebar">Sidebar</div>
+        <div id="content1">Content1</div>
+        <div id="content2">Content2</div>
+        <div id="content3">Content3</div>
+        <footer>Footer</footer>    
+        </div>
+    </body>
+</html>
